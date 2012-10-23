@@ -1,0 +1,26 @@
+/* 
+    Document   : ie
+    Created on : Oct 23, 2012, 10:53:53 AM
+    Author     : alexborton
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#page-wrapper {
+  width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  }
+  nav#main-nav ul li {
+    margin-right: 30px;
+    width: auto;
+    text-align: left;
+    }
+    nav#main-nav ul li a {
+      padding: 0;
+      margin: 0;
+      background: 0;
+      }
+      nav#main-nav ul li a:hover {
+        background: none;
+      }
