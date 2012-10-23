@@ -50,7 +50,7 @@
       
       <p>Once activated, sbResponsiveNavigation uses the original HTML markup for desktop and combines it with some CSS media queries and a little jQuery to create a mobile friendly navigation.</p>
       
-      <p>There are two navigation types on offer - a slide-down button style for smaller menu's and a Select box dropdown for larger menues with multiple levels. Either can be activated through the plugin options with no additional markup required for either.</p>
+      <p>There are two navigation types on offer - a slide-down button style for smaller menu's and a Select box dropdown for larger menus with multiple levels. Either can be activated through the plugin options with no additional markup required.</p>
     </section>  
     
     <footer>
@@ -60,34 +60,25 @@
   </div>
   
   
-  <!-- Remember to call jQuery! You should also have a local version if google's fails -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script src="../js/jquery.sbMobileNavigation.js"></script>
+  <script src="../js/jquery.sbResponsiveNavigation.js"></script>
   
-  <script>
-    mobileNavigation();
-    
-    
-    /*
+  <script>    
     $(document).ready(function() {
         //Shows default values
-        $('#filter-results').sbParallaxFilter({
-          columnNum               : 5, //number of columns
-          transTime               : 250, //transition time
-          movement                : 30, //zoom/movement level
-          fadeToOpacity           : 0.3, //opacity to fade to
-          parallaxAmount          : 0.2, //extremity of parallax effect - 1.0 being very high
-          itemContainer           : 'section', //individual item container (eg: div.item)
-          itemContainerInner      : '.inner', //inner layer of item container (required for parallax effect)
-          filterNavigation        : 'nav#filter-nav ul', //navigation container (ul for example)
-          filterNavigationItem    : 'nav#filter-nav ul li a', //navigation container item (clicked item)
-          filterNavigationCurrent : 'current', //class added to current nav item
-          notActiveClass          : 'not-active', //class added to all non-active items
-          huddleItems             : true
+        $('nav#main-nav').sbResponsiveNav({
+          topNavClass    : 'top-nav', //This is required for multiple layer navigations when using the drop-down setting
+          openCloseLink  : 'open-close-nav', //This class will be applied to the open/close link
+          openLinkText   : 'Open Navigation', //The open/close link will read this when closed
+          closeLinkText  : 'Close Navigation', //The open/close link will read this when open
+          currentItem    : 'current', //applied to the current nav item
+          openClass      : 'open', //added to the open/close link to distinguish its state when open
+          closeClass     : 'closed', //added to the open/close link to distinguish its state when closed
+          fadeTrans      : false, //select true to change the slide-down to a fade in. Better for fixed position navigation
+          dropDown       : false, //select true to activate the select style drop-down menu for larger menus
+          dropDownText   : 'Go to...' //used in conjunction with the select style drop-down menu as the first item
         });
-
     });   
-    */
   </script>
 
 </body>
